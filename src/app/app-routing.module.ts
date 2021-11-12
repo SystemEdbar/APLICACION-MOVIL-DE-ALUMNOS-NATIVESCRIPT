@@ -4,11 +4,13 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 
 import { ItemsComponent } from './item/items.component'
 import { ItemDetailComponent } from './item/item-detail.component'
+import { LoginComponent } from './login/login.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'items', component: ItemsComponent },
   { path: 'item/:id', component: ItemDetailComponent,  },
+  { path: "login", component: LoginComponent },
 ]
 
 @NgModule({
@@ -16,4 +18,4 @@ const routes: Routes = [
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponents =[ItemDetailComponent, ItemsComponent]
+export const routingComponents =[ItemDetailComponent, ItemsComponent, LoginComponent]
