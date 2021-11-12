@@ -30,11 +30,7 @@ export class RegisterComponent implements OnInit {
         localStorage.setItem("access_token",data.result.access_token)
         this.router.navigate(['items'])
       }else{
-        if(data.status == 422){
-          this.showAlert("!Debes llenar todos los campos!");
-        }else{
-          this.showAlert("¡Error al Registrarse!");
-        }
+        this.showAlert("¡Error al Registrarse!");
       }
     }, error => console.log(error) );
   }
