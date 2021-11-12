@@ -5,11 +5,13 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 import { ItemsComponent } from './item/items.component'
 import { ItemDetailComponent } from './item/item-detail.component'
 import { LoginComponent } from './login/login.component'
+import { RegisterComponent } from './login/register.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'items', component: ItemsComponent },
   { path: 'item/:id', component: ItemDetailComponent,  },
+  { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
 ]
 
@@ -18,4 +20,4 @@ const routes: Routes = [
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponents =[ItemDetailComponent, ItemsComponent, LoginComponent]
+export const routingComponents =[ItemDetailComponent, ItemsComponent, LoginComponent, RegisterComponent]

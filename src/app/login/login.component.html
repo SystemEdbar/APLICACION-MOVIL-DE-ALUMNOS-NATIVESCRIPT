@@ -3,23 +3,25 @@
 </ActionBar>
 <GridLayout backgroundColor="#CCCCCC">
     <ScrollView>
-        <StackLayout margin="10" verticalAlignment="center">
+        <StackLayout margin="10" verticalAlignment="center" class="login-form" [formGroup]="loginForm">
             <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
                 <StackLayout class="text-center">
                     <Label text="&#xf2bd;" fontSize="80" width="100%" height="100%" class="fa action-item"></Label>
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label text="Correo Electronico" class="label font-weight-bold m-b-5" fontSize="15"></Label>
-                    <TextField class="input"></TextField>
+                    <TextField class="input" formControlName="email"></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
                 <StackLayout class="input-field">
                     <Label text="Contraseña" class="label font-weight-bold m-b-5" fontSize="15"></Label>
-                    <TextField secure="true" class="input"></TextField>
+                    <TextField secure="true" class="input" formControlName="password"></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
-                <Button class="btn btn-primary w-50" text="Iniciar Sesion" fontSize="15"></Button>
-                <Label text="Not a member? Register here." class="text-center footnote"></Label>
+                <Button class="btn btn-primary" text="Iniciar Sesion" fontSize="15" class="-rounded-lg"
+                        height="100%"
+                        (tap)="onLogin(loginForm.value)"></Button>
+                <Label text="No tienes una cuenta? Registrate." (tap)="goRegister()" class="text-center footnote"></Label>
             </StackLayout>
         </StackLayout>
     </ScrollView>
