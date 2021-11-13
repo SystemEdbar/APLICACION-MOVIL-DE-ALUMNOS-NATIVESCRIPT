@@ -1,0 +1,33 @@
+<ActionBar class="text-center">
+    <Label text="REGISTRAR USUARIO" fontSize="20"></Label>
+</ActionBar>
+<GridLayout backgroundColor="#CCCCCC">
+    <ScrollView>
+        <StackLayout margin="10" verticalAlignment="center" class="register-form" [formGroup]="registerForm">
+            <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+                <StackLayout class="text-center">
+                    <Label text="&#xf2bd;" fontSize="80" width="100%" height="100%" class="fa action-item"></Label>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Nombre de Usuario" class="label font-weight-bold m-b-5" fontSize="15"></Label>
+                    <TextField class="input" formControlName="name"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Correo Electronico" class="label font-weight-bold m-b-5" fontSize="15"></Label>
+                    <TextField class="input" formControlName="email"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <StackLayout class="input-field">
+                    <Label text="Contraseña" class="label font-weight-bold m-b-5" fontSize="15"></Label>
+                    <TextField secure="true" class="input" formControlName="password"></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+                <Button class="btn btn-primary" text="Registrarse" fontSize="15" class="-rounded-lg"
+                        height="100%"
+                        (tap)="onRegister(registerForm.value)"></Button>
+                <Label text="Ya tienes una cuenta? Inicia Sesion." (tap)="goLogin()" class="text-center footnote"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

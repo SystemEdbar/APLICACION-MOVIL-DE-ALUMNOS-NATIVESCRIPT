@@ -1,0 +1,57 @@
+
+<!--<ActionBar class="text-center">-->
+<!--    <ListView [items]="items">-->
+<!--        <ng-template let-item="item" let-i="index">-->
+<!--            <StackLayout class="text-left">-->
+<!--                <Label text="Hello" fontSize="20"></Label>-->
+<!--            </StackLayout>-->
+<!--        </ng-template>-->
+<!--    </ListView>-->
+<!--</ActionBar>-->
+<ActionBar>
+    <StackLayout horizontalAlignment="right" verticalAlignment="center" orientation="horizontal">
+        <StackLayout horizontalAlignment="left">
+            <Button class="btn btn-primary" text="Cerrar Sesion" fontSize="15" class="-rounded-lg"
+                    height="100%" backgroundColor="#E9E7E2"
+                    (tap)="goBack()"></Button>
+        </StackLayout>
+        <Label text="           " fontSize="10"></Label>
+        <Label [text]="items.name+ ' '" fontSize="20"></Label>
+        <image width="10%" height="10%" [src]="items.profile_photo_url"></image>
+        <Label fontSize="10"></Label>
+    </StackLayout>
+</ActionBar>
+<GridLayout backgroundColor="#F7F3E7">
+    <StackLayout>
+        <StackLayout class="text-center">
+            <Label fontSize="10"></Label>
+            <StackLayout>
+                <image width="40"height="40"
+                src="https://cdn.icon-icons.com/icons2/1744/PNG/512/3643769-building-home-house-main-menu-start_113416.png"
+                ></image>
+                <Label text="Pestaña Principal Home" fontSize="25"></Label>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+        </StackLayout>
+        <FlexboxLayout flexDirection="column" width="80%">
+            <StackLayout height="80" backgroundColor="#DCDAD4" verticalAlignment="center" >
+                <Label text="Listado de Alumnos" (tap)="option1()" fontSize="25" horizontalAlignment="Center"></Label>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+            <StackLayout height="80" backgroundColor="#E9E7E2" verticalAlignment="center">
+                <Label text="Vynasaur y Evoluciones" (tap)="option2()" fontSize="25" horizontalAlignment="Center"></Label>
+            </StackLayout>
+
+            <Label fontSize="10"></Label>
+            <StackLayout height="80" backgroundColor="#DCDAD4" verticalAlignment="center">
+                <Label text="Squirtle y Evoluciones" (tap)="option3()" fontSize="25" horizontalAlignment="Center"></Label>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+            <StackLayout height="80" backgroundColor="#E9E7E2" verticalAlignment="center">
+                <Label text="Charmander y Evoluciones" (tap)="option4()" fontSize="25" horizontalAlignment="Center"></Label>
+            </StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+</GridLayout>
+
+

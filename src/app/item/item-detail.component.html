@@ -1,9 +1,44 @@
-<ActionBar title="Details"></ActionBar>
-
-<FlexboxLayout flexDirection="column">
-  <FlexboxLayout class="m-15">
-    <Label class="h2" [text]="item.id + '. '"></Label>
-    <Label class="h2" [text]="item.name"></Label>
+<ActionBar>
+  <StackLayout horizontalAlignment="right" verticalAlignment="center" orientation="horizontal">
+    <StackLayout horizontalAlignment="left">
+      <Button class="btn btn-primary" text="Regresar" fontSize="15" class="-rounded-lg"
+              height="100%" backgroundColor="#E9E7E2"
+              (tap)="goBack()"></Button>
+    </StackLayout>
+    <Label text="                     " fontSize="10"></Label>
+    <Label [text]="data.name+ ' '" fontSize="20"></Label>
+    <image width="10%" height="10%" [src]="data.profile_photo_url"></image>
+    <Label fontSize="10"></Label>
+  </StackLayout>
+</ActionBar>
+<GridLayout backgroundColor="#F7F3E7">
+  <Label fontSize="10"></Label>
+  <FlexboxLayout flexDirection="column" width="90%">
+    <StackLayout>
+      <Label fontSize="10"></Label>
+    </StackLayout>
+    <StackLayout class="m-10">
+      <Label fontSize="20" [text]="'NOMBRE: '"></Label>
+      <Label fontSize="18" [text]="item.name"></Label>
+    </StackLayout>
+    <StackLayout class="m-10">
+      <Label fontSize="20" [text]="'APELLIDO: '"></Label>
+      <Label fontSize="18" [text]="item.lastname"></Label>
+    </StackLayout>
+    <StackLayout class="m-10">
+      <Label fontSize="20" [text]="'TIPO DE ROLE: '"></Label>
+      <Label fontSize="18" [text]="item.role"></Label>
+    </StackLayout>
+    <StackLayout class="m-10">
+      <Label fontSize="20" [text]="'CORREO: '"></Label>
+      <Label fontSize="18" [text]="item.email"></Label>
+    </StackLayout>
+    <StackLayout horizontalAlignment="center">
+      <Label fontSize="10"></Label>
+      <image width="40%" height="40%"
+             src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'+ item.id + '.png'}}"
+      ></image>
+      <Label class="text-center" fontSize="20" [text]="'Que tipo de Pokemon eres?'"></Label>
+    </StackLayout>
   </FlexboxLayout>
-  <Label class="h4 m-15" [text]="item.role"></Label>
-</FlexboxLayout>
+</GridLayout>

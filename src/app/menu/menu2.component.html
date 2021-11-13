@@ -1,0 +1,49 @@
+<ActionBar>
+    <StackLayout horizontalAlignment="right" verticalAlignment="center" orientation="horizontal">
+        <StackLayout horizontalAlignment="left">
+            <Button class="btn btn-primary" text="Regresar" fontSize="15" class="-rounded-lg"
+                    height="100%" backgroundColor="#E9E7E2"
+                    (tap)="goBack()"></Button>
+        </StackLayout>
+        <Label text="                          " fontSize="10"></Label>
+        <Label [text]="items.name+ ' '" fontSize="20"></Label>
+        <image width="10%" height="10%"  [src]="items.profile_photo_url"></image>
+        <Label fontSize="10"></Label>
+    </StackLayout>
+</ActionBar>
+<GridLayout backgroundColor="#F7F3E7">
+    <StackLayout>
+        <StackLayout class="text-center">
+            <StackLayout>
+                <Label fontSize="10"></Label>
+                <Label text="TODAS LAS EVOLUCIONES" fontSize="25"></Label>
+                <image width="100"height="100"
+                        src="https://richaudcommx.files.wordpress.com/2021/01/pokemon.png?w=2000&h=1200&crop=1"
+                        ></image>
+            </StackLayout>
+        </StackLayout>
+        <FlexboxLayout flexDirection="column" width="80%">
+            <StackLayout height="125" backgroundColor="#DCDAD4" verticalAlignment="center" >
+                <Label text="Squirtle" fontSize="25" horizontalAlignment="Center"></Label>
+                <image width="75"height="75"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                        ></image>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+            <StackLayout height="125" backgroundColor="#E9E7E2" verticalAlignment="center">
+                <Label text="Wartortle" fontSize="25" horizontalAlignment="Center"></Label>
+                <image width="75"height="75"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+                        ></image>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+            <StackLayout height="125" backgroundColor="#DCDAD4" verticalAlignment="center">
+                <Label text="Blastoise" fontSize="25" horizontalAlignment="Center"></Label>
+                <image width="75"height="75"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+                        ></image>
+            </StackLayout>
+            <Label fontSize="10"></Label>
+        </FlexboxLayout>
+    </StackLayout>
+</GridLayout>
