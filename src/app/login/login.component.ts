@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
+import { Location } from '@angular/common';
 import * as dialogs from "@nativescript/core";
 import { LoginService} from '../service/login.service'
 import { LoginI} from '../interface/login.interface'

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
+import { Location } from '@angular/common';
 import * as dialogs from "@nativescript/core";
 import { LoginService} from '../service/login.service'
 import { RegisterI} from '../interface/register.interface'
@@ -13,7 +14,7 @@ require( "nativescript-localstorage" );
 
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup
-  constructor(private router: Router, private api:LoginService) {}
+  constructor(private router: Router, private api:LoginService, private _location: Location) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -41,6 +42,6 @@ export class RegisterComponent implements OnInit {
       });
     }
   goLogin(){
-    this.router.navigate(['/login'])
+     this._location.back();
   }
 }
