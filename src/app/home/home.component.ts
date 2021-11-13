@@ -14,14 +14,20 @@ export class HomeComponent implements OnInit {
   items: any
   constructor(private router: Router, private api:UserService) {}
   ngOnInit(): void {
-    this.api.infoUser().subscribe(
-      response => {
-        this.items=response.result;
-      },
-      error => console.log(error)
-    );
+    if(localStorage.getItem('access_token')){
+      this.api.infoUser().subscribe(
+        response => {
+          this.items=response.result;
+        },
+        error => console.log(error)
+      );
+    }else{
+      this.router.navigate(['/login'])
+    }
   }
   goBack(){
+    localStorage.removeItem('access_token')
+    this.router.navigate(['/login'])
   }
   option1(){
     this.router.navigate(['/items'])
