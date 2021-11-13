@@ -6,13 +6,15 @@ import { ItemsComponent } from './item/items.component'
 import { ItemDetailComponent } from './item/item-detail.component'
 import { LoginComponent } from './login/login.component'
 import { RegisterComponent } from './login/register.component'
+import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent,  },
+  { path: 'item/:id', component: ItemDetailComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
+  { path: "home", component: HomeComponent },
 ]
 
 @NgModule({
@@ -20,4 +22,4 @@ const routes: Routes = [
   exports: [NativeScriptRouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponents =[ItemDetailComponent, ItemsComponent, LoginComponent, RegisterComponent]
+export const routingComponents =[ItemDetailComponent, ItemsComponent, LoginComponent, RegisterComponent, HomeComponent]

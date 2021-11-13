@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs'
+import { ResponseI } from '../interface/response.interface'
 import { Http, knownFolders, path, File, ImageSource, HttpResponse } from "@nativescript/core";
 
 @Injectable({
@@ -10,6 +11,7 @@ import { Http, knownFolders, path, File, ImageSource, HttpResponse } from "@nati
 export class UserService {
   url: string = "https://systemedbar.site/"
   constructor(private http:HttpClient) {}
+
   private createRequestOptions() {
     let headers = new HttpHeaders({
       "Content-Type": "application/json",
@@ -18,7 +20,9 @@ export class UserService {
     return headers;
   }
 
-  infoUser():Observable<any>{
+  infoUser():Observable<ResponseI>{
+    let options = this.createRequestOptions();
     let dir = this.url + "api/infouser"
-    return this.http.get(dir)
+    return this.http.get<ResponseI>(dir,{headers: options})
   }
+}

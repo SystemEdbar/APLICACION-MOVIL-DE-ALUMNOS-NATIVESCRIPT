@@ -1,5 +1,20 @@
-<ActionBar class="text-center">
-    <Label text="" fontSize="20"></Label>
+
+<!--<ActionBar class="text-center">-->
+<!--    <ListView [items]="items">-->
+<!--        <ng-template let-item="item" let-i="index">-->
+<!--            <StackLayout class="text-left">-->
+<!--                <Label text="Hello" fontSize="20"></Label>-->
+<!--            </StackLayout>-->
+<!--        </ng-template>-->
+<!--    </ListView>-->
+<!--</ActionBar>-->
+<ActionBar verticalAlignment="center">
+    <StackLayout horizontalAlignment="right">
+        <Label [text]="items.name" fontSize="20"></Label>
+        <image width="40"height="40" [src]="items.profile_photo_url"></image>
+    </StackLayout>
 </ActionBar>
+
 <GridLayout backgroundColor="#CCCCCC">
 </GridLayout>
+
