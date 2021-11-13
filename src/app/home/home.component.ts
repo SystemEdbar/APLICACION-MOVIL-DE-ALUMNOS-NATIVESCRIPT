@@ -10,7 +10,7 @@ require( "nativescript-localstorage" );
 })
 
 export class HomeComponent implements OnInit {
-  items: Object
+  items: any
   constructor(private router: Router, private api:UserService) {}
   ngOnInit(): void {
     console.log("ENTRO")
