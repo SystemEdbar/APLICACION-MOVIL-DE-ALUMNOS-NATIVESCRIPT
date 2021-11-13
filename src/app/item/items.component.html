@@ -12,10 +12,11 @@
   </StackLayout>
 </ActionBar>
 <GridLayout backgroundColor="#F7F3E7">
-  <ListView [items]="items">
-    <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['/item', item.id]">
-        <Label [text]="item.name"></Label>
+  <ListView [items]="items" width="95%">
+    <ng-template let-item="item" let-i="index" >
+      <StackLayout [nsRouterLink]="['/item', item.id]" orientation="horizontal">
+        <Label text="{{(i+1) +'.'}}" fontSize="25"></Label>
+        <Label [text]="item.name + ' '+ item.lastname" fontSize="15"></Label>
       </StackLayout>
     </ng-template>
   </ListView>

@@ -1,6 +1,17 @@
-<ActionBar title="Details"></ActionBar>
-
-<FlexboxLayout flexDirection="column">
+<ActionBar>
+  <StackLayout horizontalAlignment="right" verticalAlignment="center" orientation="horizontal">
+    <StackLayout horizontalAlignment="left">
+      <Button class="btn btn-primary" text="Regresar" fontSize="15" class="-rounded-lg"
+              height="100%" backgroundColor="#E9E7E2"
+              (tap)="goBack()"></Button>
+    </StackLayout>
+    <Label text="                     " fontSize="10"></Label>
+    <Label [text]="data.name+ ' '" fontSize="20"></Label>
+    <image width="10%" height="10%" [src]="data.profile_photo_url"></image>
+    <Label fontSize="10"></Label>
+  </StackLayout>
+</ActionBar>
+<FlexboxLayout flexDirection="column" backgroundColor="#F7F3E7">
   <FlexboxLayout class="m-15">
     <Label class="h2" [text]="item.id + '. '"></Label>
     <Label class="h2" [text]="item.name"></Label>
