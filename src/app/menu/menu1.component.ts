@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core'
-import { Location } from '@angular/common';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
 import * as dialogs from "@nativescript/core";
+import { Location } from '@angular/common';
 import { UserService } from '../service/user.service'
 import { ResponseI } from '../interface/response.interface'
 require( "nativescript-localstorage" );
@@ -13,7 +13,7 @@ require( "nativescript-localstorage" );
 
 export class Menu1Component implements OnInit {
   items: any
-  constructor(private router: Router, private api:UserService,  private _location: Location) {}
+  constructor(private router: Router, private api:UserService, private _location: Location) {}
   ngOnInit(): void {
     this.api.infoUser().subscribe(
       response => {

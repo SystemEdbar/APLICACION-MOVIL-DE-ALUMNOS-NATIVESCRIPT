@@ -7,28 +7,19 @@ import { Item } from './item'
 })
 export class ItemService {
   private items = new Array<Item>(
-    { id: 1, name: 'Ter Stegen', role: 'Goalkeeper' },
-    { id: 3, name: 'Piqué', role: 'Defender' },
-    { id: 4, name: 'I. Rakitic', role: 'Midfielder' },
-    { id: 5, name: 'Sergio', role: 'Midfielder' },
-    { id: 6, name: 'Denis Suárez', role: 'Midfielder' },
-    { id: 7, name: 'Arda', role: 'Midfielder' },
-    { id: 8, name: 'A. Iniesta', role: 'Midfielder' },
-    { id: 9, name: 'Suárez', role: 'Forward' },
-    { id: 10, name: 'Messi', role: 'Forward' },
-    { id: 11, name: 'Neymar', role: 'Forward' },
-    { id: 12, name: 'Rafinha', role: 'Midfielder' },
-    { id: 13, name: 'Cillessen', role: 'Goalkeeper' },
-    { id: 14, name: 'Mascherano', role: 'Defender' },
-    { id: 17, name: 'Paco Alcácer', role: 'Forward' },
-    { id: 18, name: 'Jordi Alba', role: 'Defender' },
-    { id: 19, name: 'Digne', role: 'Defender' },
-    { id: 20, name: 'Sergi Roberto', role: 'Midfielder' },
-    { id: 21, name: 'André Gomes', role: 'Midfielder' },
-    { id: 22, name: 'Aleix Vidal', role: 'Midfielder' },
-    { id: 23, name: 'Umtiti', role: 'Defender' },
-    { id: 24, name: 'Mathieu', role: 'Defender' },
-    { id: 25, name: 'Masip', role: 'Goalkeeper' }
+    { id: 1, name: 'EDWIN ENRIQUE', lastname: 'BARRERA CASTILLO', email: 'ebarrerac1@miumg.edu.gt', role: 'Estudiante' },
+    { id: 2, name: 'FERNANDO JOSÉ ', lastname: 'BARRERA LEÓN', email: 'fbarreral@miumg.edu.gt', role: 'Estudiante' },
+    { id: 3, name: 'KEVIN JORDANO', lastname: 'BARRIOS CHIN', email: 'kbarriosc8@miumg.edu.gt', role: 'Estudiante' },
+    { id: 4, name: 'LESLY MARIBEL', lastname: 'CASTILLO RAMÍREZ', email: 'lcastillor4@miumg.edu.gt', role: 'Estudiante' },
+    { id: 5, name: 'EFRAIN ALEXANDER', lastname: 'DE LEÓN BENITEZ', email: 'edeleonb6@miumg.edu.gt', role: 'Estudiante' },
+    { id: 6, name: 'PATRICK DANIEL', lastname: 'HERNÁNDEZ CARÍAS', email: 'phernandezc4@miumg.edu.gt', role: 'Estudiante' },
+    { id: 7, name: 'PERLA RUBY', lastname: 'LOPEZ CHOJ ', email: 'plopezc1@miumg.edu.gt', role: 'Estudiante' },
+    { id: 8, name: 'JUAN MANUEL ', lastname: 'LÓPEZ REYES', email: 'jlopezr50@miumg.edu.gt', role: 'Estudiante' },
+    { id: 9, name: 'JONATHAN ALEXANDER', lastname: 'MARIN INTERIANO', email: ' jmarini@miumg.edu.gt', role: 'Estudiante' },
+    { id: 10, name: 'ALLAN ESTUARDO', lastname: 'MENDEZ AGUILAR', email: 'amendeza9@miumg.edu.gt', role: 'Estudiante' },
+    { id: 11, name: 'BRYAN ALEXANDER', lastname: 'MORENO SARMIENTO', email: 'bmorenos@miumg.edu.gt', role: 'Estudiante' },
+    { id: 12, name: 'DORIAN ALDAIR', lastname: 'OLIVEROS BOTZOCK', email: 'doliverosb@miumg.edu.gt', role: 'Estudiante' },
+    { id: 13, name: 'JUAN PABLO ', lastname: 'ESCOBAR', email: 'jescobarc11@miumg.edu.gt', role: 'Catedrático' },
   )
 
   getItems(): Array<Item> {

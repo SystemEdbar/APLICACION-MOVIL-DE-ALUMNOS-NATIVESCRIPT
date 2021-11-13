@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   goBack(){
   }
   option1(){
+    this.router.navigate(['/items'])
   }
   option2(){
     this.router.navigate(['/menu1'])
